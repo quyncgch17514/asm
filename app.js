@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-//khai báo và cấu hình mongoose
+//khai báo và cấu hình mongoose...
 var mongoose = require('mongoose');
 var db = "mongodb+srv://admin:admin@cluster0.l6fubye.mongodb.net/asmgch1102";
 mongoose.connect(db).then(() => { console.log ("successful connection to database !")});
