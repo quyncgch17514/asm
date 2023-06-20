@@ -1,10 +1,22 @@
+:root {
+  --bs-font-sans-serif: 'Rubik', sans-serif;
+}
+
+.container-xxl { max-width: 1530px; }
+
+body {
+  background-image: url("https://i.pinimg.com/564x/f5/a7/69/f5a7693fc961775109dbdc21c210fccb.jpg");
+  background-color: rgb(243,243,243);
+}
+
+a { color: var(--bs-dark); }
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #ee0014;
+  color: #18f105;
 }
 
 .cot {
@@ -13,6 +25,7 @@ a {
   font-style: italic;
   text-decoration: underline;
 }
+
 
 .zoom {
   padding: 50px;

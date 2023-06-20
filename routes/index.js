@@ -2,18 +2,18 @@ var express = require('express');
 const GundamModel = require('../models/GundamModel');
 var router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/crud', async (req, res) => {
   var gundams = await GundamModel.find({});
 
   var total = await GundamModel.count();
   //console.log(gundams);
   //res.send(gundams);
-  res.render('index', { gundams : gundams , total : total })
+  res.render('crud', { gundams : gundams , total : total })
 })
 
-router.get('/list', async (req, res) => {
+router.get('/', async (req, res) => {
   var gundams = await GundamModel.find({});
-  res.render('list', { gundams: gundams });
+  res.render('index', { gundams: gundams });
 })
 
 router.get('/delete/:id', async(req, res) => {
@@ -66,5 +66,7 @@ router.post('/edit/:id', async (req, res) => {
   .then(() => { console.log('Edit gundam succeed !') });
   res.redirect('/');
 })
+
+
 
 module.exports = router;
