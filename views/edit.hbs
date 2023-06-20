@@ -1,0 +1,34 @@
+<form class="bg-light text-center col-md-8" action="/edit/{{gundam._id}}" method="post">
+   <div>
+      <h1 class="text text-primary">Edit gundam</h1>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Name</label>
+      <input class="form-control" type="text" name="name" value="{{ gundam.name }}" required>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Brand</label>
+      <input class="form-control" type="text" name="brand" value="{{ gundam.brand }}" required>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Price</label>
+      <input class="form-control" type="text" name="price" value="{{ gundam.price }}" required>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Quantity</label>
+      <input class="form-control" type="number" name="quantity" value="{{ gundam.quantity }}" required>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Image</label><br>
+      <img src="{{ gundam.image}}" width="100" height="100"><br>
+      <input class="form-control" type="text" name="image" value="{{ gundam.image }}" required>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text text-success">Video</label><br>
+      <iframe src="https://www.youtube.com/embed/{{ gundam.video }}" width="200" height="150"></iframe>
+      <input class="form-control" type="text" name="video" value="{{ gundam.video }}" required>
+   </div>
+   <div class="form-group mt-3">
+      <input class="btn btn-danger" type="submit" value="Edit">
+   </div>
+</form>
