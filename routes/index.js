@@ -25,14 +25,14 @@ router.get('/delete/:id', async(req, res) => {
   .then(() => { console.log ('Delete gundam succeed !')})
   .catch((err) => { console.log ('Delete gundam failed !')});
 
-  res.redirect('/');
+  res.redirect('/crud');
 })
 
 router.get('/drop', async(req, res) => {
   await GundamModel.deleteMany({})
   .then(() => { console.log ('Delete all gundams succeed !')});
   
-  res.redirect('/');
+  res.redirect('/crud');
 })
 
 router.post('/order', async (req, res) => {
@@ -52,7 +52,7 @@ router.post('/add', async (req, res) => {
   var gundam = req.body;
   await GundamModel.create(gundam)
   .then(() => { console.log ('Add new gundam succeed !')});
-  res.redirect('/');
+  res.redirect('/crud');
 })
 
 router.get('/edit/:id', async (req, res) => {
@@ -64,7 +64,7 @@ router.post('/edit/:id', async (req, res) => {
   var id = req.params.id;
   await GundamModel.findByIdAndUpdate(id)
   .then(() => { console.log('Edit gundam succeed !') });
-  res.redirect('/');
+  res.redirect('/crud');
 })
 
 
