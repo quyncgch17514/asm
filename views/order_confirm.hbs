@@ -1,7 +1,7 @@
 {{!-- div.col>div.row*2 --}}
 <div class="col">
    <div class="row">
-      <h1 class="text text-primary text-center">GUNDAM ORDER</h1>
+      <h1 class="text text-info text-center">GUNDAM ORDER</h1>
    </div>
    <div class="row">
       <table class="table table-bordered text-center">
@@ -11,22 +11,22 @@
             </th>
          </tr>
          <tr> 
-            <th>Gundam name</th>
-            <th>{{ gundam.name }}</th>
+            <th class="text text-info">Gundam name</th>
+            <th class="text text-info">{{ gundam.name }}</th>
          </tr>
          <tr>
-            <th>Gundam price</th>
-            <th>${{ gundam.price }}</th>
+            <th class="text text-info">Gundam price</th>
+            <th class="text text-info">${{ gundam.price }}</th>
          </tr>
          <tr>
-            <th>Order quantity</th>
-            <th>{{ order_quantity }}</th>
+            <th class="text text-info">Order quantity</th>
+            <th class="text text-info">{{ order_quantity }}</th>
          </tr>
          <tr>
-            <th>Total price</th>
-            <th>${{ total_price }}</th>
+            <th class="text text-info">Total price</th>
+            <th class="text text-info">${{ total_price }}</th>
          </tr>
-         <tr class="text-center">
+         <tr class="text-center text-info">
             <th colspan="2">
                <a class="btn btn-danger" href="/confirm">Confirm</a>
             </th>
