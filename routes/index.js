@@ -4,10 +4,7 @@ var router = express.Router();
 
 router.get('/crud', async (req, res) => {
   var gundams = await GundamModel.find({});
-
   var total = await GundamModel.count();
-  //console.log(gundams);
-  //res.send(gundams);
   res.render('crud', { gundams : gundams , total : total })
 })
 
@@ -17,21 +14,15 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/delete/:id', async(req, res) => {
-  // var id = req.params.id;
-  // var gundam = await GundamModel.findById(id);
-  // await GundamModel.deleteOne(gundam);
-
   await GundamModel.findByIdAndDelete(req.params.id)
   .then(() => { console.log ('Delete gundam succeed !')})
   .catch((err) => { console.log ('Delete gundam failed !')});
-
   res.redirect('/crud');
 })
 
 router.get('/drop', async(req, res) => {
   await GundamModel.deleteMany({})
   .then(() => { console.log ('Delete all gundams succeed !')});
-  
   res.redirect('/crud');
 })
 
