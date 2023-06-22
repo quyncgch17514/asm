@@ -1,21 +1,21 @@
 {{!-- table.table-primary.text-center.bg-light.mt-3.mb-3>tr*3>th*8 --}}
 <div class="container min-vh-100 d-flex justify-content-center">
-   <table class="table table-dark text-center bg-light px-4 mt-3 mb-3">
+   <table class="table table-light text-center bg-light px-4 mt-3 mb-3">
       <tr>
          <th class="h1 text text-danger" colspan="6">Gundam List ({{ total }})</th>
          
-         <td><a class="btn btn-success" href="/add">Add</a></td>
-         <td><a class="btn btn-danger" href="/drop"
+         <td><a class="btn btn-success" href="/gundam/add">Add</a></td>
+         <td><a class="btn btn-danger" href="/gundam/drop"
          onclick="return confirm('Are you sure to delete all gundam ?');"
          >Drop</a></td>
          
       </tr>
       <tr class="cot" >
-         <th>Tên</th>
-         <th>Thương hiệu</th>
-         <th>Số lượng</th>
-         <th>Giá tiền</th>
-         <th>Ảnh</th>
+         <th>Name</th>
+         <th>Brand</th>
+         <th>Quantity</th>
+         <th>Price</th>
+         <th>Image</th>
          <th>Video</th>
          <th colspan="2">Menu</th>
       </tr>
@@ -33,8 +33,8 @@
             height="200"></iframe>
          </th>
          
-            <td><a class="btn btn-warning p-2" href="/edit/{{_id}}">Edit</a></td>
-            <td><a class="btn btn-danger p-2" href="/delete/{{_id}}" 
+            <td><a class="btn btn-warning p-2" href="/gundam/edit/{{_id}}">Edit</a></td>
+            <td><a class="btn btn-danger p-2" href="/gundam/delete/{{_id}}" 
             onclick="return confirm('Are you sure to delete this gundam ?');"
             >Delete</a></td>
          

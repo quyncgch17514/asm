@@ -1,0 +1,36 @@
+<div class="container min-vh-100 d-flex justify-content-center">
+<form class="bg-dark text-center col-md-8" herf="/lego/edit/{{lego._id}}" method="post">
+   <div>
+      <h1 class="text text-primary">Edit Lego</h1>
+   </div>
+   <div class="form-group mt-3 p-3">
+      <label class="text text-success">Name</label>
+      <input class="form-control" type="text" name="name" value="{{ lego.name }}" required>
+   </div>
+   <div class="form-group mt-3 p-3">
+      <label class="text text-success">Brand</label>
+      <input class="form-control" type="text" name="brand" value="{{ lego.brand }}" required>
+   </div>
+   <div class="form-group mt-3 p-3">
+      <label class="text text-success">Price</label>
+      <input class="form-control" type="text" name="price" value="{{ lego.price }}" required>
+   </div>
+   <div class="form-group mt-3 p-3">
+      <label class="text text-success">Quantity</label>
+      <input class="form-control" type="number" name="quantity" value="{{ lego.quantity }}" required>
+   </div>
+   <div class="form-group mt-3 p-3">
+      <label class="text text-success">Image</label><br>
+      <img src="{{ gundam.image}}" width="100" height="100"><br>
+      <input class="form-control" type="text" name="image" value="{{ lego.image }}" required>
+   </div>
+   <div class="form-group mt-3 p-3">
+      <label class="text text-success">Video</label><br>
+      <iframe src="https://www.youtube.com/embed/{{ lego.video }}" width="200" height="150"></iframe>
+      <input class="form-control" type="text" name="video" value="{{ lego.video }}" required>
+   </div>
+   <div class="form-group mt-3 p-3">
+      <input class="btn btn-danger" type="submit" value="Edit">
+   </div>
+</form>
+</div>

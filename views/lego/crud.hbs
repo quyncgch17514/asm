@@ -1,0 +1,45 @@
+{{!-- table.table-primary.text-center.bg-light.mt-3.mb-3>tr*3>th*8 --}}
+<div class="container min-vh-100 d-flex justify-content-center">
+   <table class="table table-light text-center bg-light px-4 mt-3 mb-3">
+      <tr>
+         <th class="h1 text text-danger" colspan="6">Lego List ({{ total }})</th>
+         
+         <td><a class="btn btn-success" href="/lego/add">Add</a></td>
+         <td><a class="btn btn-danger" href="/lego/drop"
+         onclick="return confirm('Are you sure to delete all lego ?');"
+         >Drop</a></td>
+         
+      </tr>
+      <tr class="cot" >
+         <th>Name</th>
+         <th>Brand</th>
+         <th>Quantity</th>
+         <th>Price</th>
+         <th>Image</th>
+         <th>Video</th>
+         <th colspan="2">Menu</th>
+      </tr>
+      {{#each legos }}
+      <tr>
+         <th>{{ name }}</th>
+         <th>{{ brand }}</th>
+         <th>{{ quantity }}</th>
+         <th>
+            <img class="zoom" src="{{ image }}">
+         </th>
+         <th>${{ price }}</th>
+         <th>
+            <iframe src="https://www.youtube.com/embed/{{ video }}" width="300" 
+            height="200"></iframe>
+         </th>
+         
+            <td><a class="btn btn-warning p-2" href="/lego/edit/{{_id}}">Edit</a></td>
+            <td><a class="btn btn-danger p-2" href="/lego/delete/{{_id}}" 
+            onclick="return confirm('Are you sure to delete this lego ?');"
+            >Delete</a></td>
+         
+
+      </tr>
+      {{/each}}
+   </table>
+</div>
