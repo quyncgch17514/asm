@@ -9,5 +9,5 @@ var GundamSchema = mongoose.Schema(
       price: Number
    }
 )
-var GundamModel = mongoose.model("Mô Hình", GundamSchema, "gundam");
+var GundamModel = mongoose.model("Gundam", GundamSchema, "gundam");
 module.exports = GundamModel;
